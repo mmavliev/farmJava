@@ -1,11 +1,11 @@
 public class Chicken extends Animal{
     int id;
-    int eggsAmount;
+    EggsBunch eggsAmount;
     public Chicken(int id, int eggsAmount) {
         this.id = id;
-        this.eggsAmount = eggsAmount;
+        this.eggsAmount = new EggsBunch(eggsAmount);
     }
     public int collectProducts() {
-        return this.eggsAmount;
+        return this.eggsAmount.getAmount();
     }
 }

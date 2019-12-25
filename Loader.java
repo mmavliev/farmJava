@@ -13,6 +13,8 @@ public class Loader {
         for(int i = cowsCount+chickenCount; i < cowsCount + chickenCount+sheepCount; i++){
             farm.addAnimal(new Sheep(i,3+(int)Math.round(Math.random()*4)));
         }
-        farm.collectProducts();
+        Chicken chicken = new Chicken(1,10);
+        System.out.println(chicken.eggsAmount);
+//        farm.collectProducts();
     }
 }
