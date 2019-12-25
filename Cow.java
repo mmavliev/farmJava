@@ -1,12 +1,16 @@
-public class Cow extends Animal {
-    public Cow(int id, int milkAmount) {
+public class Cow implements Animal {
+    int id;
+    MilkLiters milkLiters;
+    public Cow(int id, int liters) {
         this.id = id;
-        this.milkAmount = milkAmount;
+        this.milkLiters = new MilkLiters(liters);
+    }
+    public int collectProducts() {
+        return this.milkLiters.amount;
     }
 
-    int id;
-    int milkAmount;
-    public int collectProducts() {
-        return this.milkAmount;
+    @Override
+    public Product getProduct() {
+        return milkLiters;
     }
 }

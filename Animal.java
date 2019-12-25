@@ -1,4 +1,4 @@
-public abstract class Animal {
-    int id;
-    abstract int collectProducts();
+public interface Animal {
+    int collectProducts();
+    Product getProduct();
 }

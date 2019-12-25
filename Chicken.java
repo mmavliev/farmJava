@@ -1,4 +1,4 @@
-public class Chicken extends Animal{
+public class Chicken implements Animal {
     int id;
     EggsBunch eggsAmount;
     public Chicken(int id, int eggsAmount) {
@@ -6,6 +6,11 @@ public class Chicken extends Animal{
         this.eggsAmount = new EggsBunch(eggsAmount);
     }
     public int collectProducts() {
-        return this.eggsAmount.getAmount();
+        return this.eggsAmount.amount;
+    }
+
+    @Override
+    public Product getProduct() {
+        return eggsAmount;
     }
 }

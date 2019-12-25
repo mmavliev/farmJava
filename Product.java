@@ -11,4 +11,6 @@ public abstract class Product {
     public String toString() {
         return Integer.toString(this.amount);
     }
+    String productName;
+    String unit;
 }
